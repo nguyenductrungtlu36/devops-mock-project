@@ -14,7 +14,7 @@ RUN curl -fsSLo /usr/share/keyrings/docker-archive-keyring.asc \
   $(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker.list && \
   apt-get update && apt-get install -y docker-ce-cli
 
-# Cài đặt Maven từ một mirror khác
+# Cài đặt Maven từ một mirror khác để chạy Java
 RUN wget https://archive.apache.org/dist/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.tar.gz && \
   tar -xvzf apache-maven-3.8.4-bin.tar.gz -C /opt && \
   ln -s /opt/apache-maven-3.8.4 /opt/maven && \
