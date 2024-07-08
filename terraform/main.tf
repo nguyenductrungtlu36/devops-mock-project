@@ -4,7 +4,6 @@ provider "aws" {
 
 module "vpc" {
   source = "./modules/vpc"
-
   cidr_block                = var.vpc_cidr_block
   public_subnet_cidr_block_1 = var.public_subnet_cidr_block_1
   public_subnet_cidr_block_2 = var.public_subnet_cidr_block_2
