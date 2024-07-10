@@ -5,7 +5,7 @@ This project builds a model to automatically deploy applications to the cloud en
 
 ![This is an alt text.](/Images/overview-project.jpg "This is a sample image.")
 
-Technologies used in this project include:
+**Technologies used in this project include:**
 * Terraform to build infrastructure
 * Ansible to install resource packs on the infrastructure
 * Amazon Web Services (AWS) to deploy infrastructure built with Terraform
@@ -15,7 +15,7 @@ Technologies used in this project include:
 * Kubernetes (K8s) to deploy applications
 -----
 # Getting Started
-Diagram of work to be done in the project:
+**Diagram of work to be done in the project:**
 * Use Terraform to build an infrastructure of 3 instances. Then use Ansible to install resource packs inside the instances
 
 ![This is an alt text.](/Images/Ansible_Terraform.png "This is a sample image.")
@@ -23,6 +23,32 @@ Diagram of work to be done in the project:
 * Instance running Jenkins are in the private subnet, instance used as Bastion Host and running Gitea are in the public subnet. And 1 EKS cluster to deploy pods.
 
 ![This is an alt text.](/Images/Instances.png "This is a sample image.")
+
+-----
+# Build infrastructure using Terraform
+## Use the following commands to run build instances
+<Note:
+- Stand in the folder: "\mock-project\terraform" to build 2 instances of Jenkins and Bastion Host
+- Stand in the folder: "\mock-project\terraform-eks" to build EKS cluster
+>
+```
+terraform init
+terraform plan
+terraform apply
+```
+
+## When we want to stop all this work, we use the command:
+
+```
+terraform destroy
+```
+
+-----
+# 
+
+
+
+
 
 
 
