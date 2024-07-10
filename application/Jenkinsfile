@@ -5,7 +5,7 @@ pipeline {
         DOCKER_CREDENTIALS_ID = 'dockerhub-credentials' 
         DOCKER_IMAGE_NAME = 'ductrung1601/demo-java-app'
         KUBECONFIG_PATH = '/var/jenkins_home/.kube/config' // Đường dẫn tới kubeconfig trong container Jenkins
-        CLUSTER_NAME = 'docker-desktop'
+        CLUSTER_NAME = 'arn:aws:eks:ap-southeast-1:381492155480:cluster/eks_cluster'
     }
 
     stages {
@@ -82,10 +82,8 @@ pipeline {
                 script {
                     withEnv(["KUBECONFIG=${env.KUBECONFIG_PATH}"]) {
                         sh """
-                        kubectl config use-context ${env.CLUSTER_NAME}
-                        kubectl apply -f k8s/deployment-service.yaml
-
-                        kubectl rollout status deployment/deployment-name --timeout=120s
+                        kubectl apply -f k8s/deployment-service.yaml --validate=false --v=9
+                        kubectl rollout status deployment/demo --timeout=120s
                         """
                     }
                 }
