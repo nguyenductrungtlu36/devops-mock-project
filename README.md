@@ -13,6 +13,15 @@ Technologies used in this project include:
 * Docker to build images and host them on DockerHub
 * Gitea Server to update commits and webhooks to jenkins
 * Kubernetes (K8s) to deploy applications
+-----
+# Getting Started
+Diagram of work to be done in the project:
+* Use Terraform to build an infrastructure of 3 instances. Then use Ansible to install resource packs inside the instances
+
+![This is an alt text.](/Images/Ansible_Terraform.jpg "This is a sample image.")
+
+
+
 
 
 
