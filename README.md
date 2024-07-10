@@ -27,10 +27,10 @@ This project builds a model to automatically deploy applications to the cloud en
 -----
 # Build infrastructure using Terraform
 ## Use the following commands to run build instances
-<Note:
+***Note:*** 
 - Stand in the folder: "\mock-project\terraform" to build 2 instances of Jenkins and Bastion Host
 - Stand in the folder: "\mock-project\terraform-eks" to build EKS cluster
->
+
 ```
 terraform init
 terraform plan
@@ -42,6 +42,9 @@ terraform apply
 ```
 terraform destroy
 ```
+
+
+
 
 -----
 # 
