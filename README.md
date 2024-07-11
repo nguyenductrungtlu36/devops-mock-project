@@ -26,7 +26,7 @@ This project builds a model to automatically deploy applications to the cloud en
 
 -----
 ## Build infrastructure using Terraform
-### Use the following commands to run build instances
+**Use the following commands to run build instances**
 ***Note:*** 
 - Stand in the folder: "\mock-project\terraform" to build 2 instances of Jenkins and Bastion Host
 - Stand in the folder: "\mock-project\terraform-eks" to build EKS cluster
@@ -42,15 +42,17 @@ This project builds a model to automatically deploy applications to the cloud en
     ```
     terraform destroy
     ```
-
 -----
 ## Install Docker, Jenkins, Java, and Gitea using Ansible 
+To install application packages, we must connect to instances using a key pair. In this demo, I use 2 key pairs for 2 instances
 
+Then I stood at the folder: "\mock-project\Ansible\" and run the following command to start the installation
 
-
-
-
-
+    ```
+    ansible-playbook playbook.yml
+    ```
+-----
+## Configure Jenkins and Gitea
 
 
 
