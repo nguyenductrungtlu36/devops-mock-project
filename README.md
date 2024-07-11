@@ -37,7 +37,7 @@ This project builds a model to automatically deploy applications to the cloud en
     terraform apply
     ```
 
-### When we want to stop all this work, we use the command
+- When we want to stop all this work, we use the command
 
     `
     terraform destroy
