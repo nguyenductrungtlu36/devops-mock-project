@@ -107,6 +107,12 @@ After the webhook is completed, all commits will automatically deploy to Jenkins
 
 ----
 
+### Đường dẫn tới Jenkins Dashboard (DNS name):
+
+[Markdown Live Preview](http://app-lb-741458399.ap-southeast-1.elb.amazonaws.com/jenkins/).
+
+----
+
 ***Deploying work automatically will help minimize errors and save time for users. I hope this project will help people better understand a CICD stream***
 
 
