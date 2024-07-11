@@ -46,7 +46,7 @@ This project builds a model to automatically deploy applications to the cloud en
 ## Install Docker, Jenkins, Java, and Gitea using Ansible 
 To install application packages, we must connect to instances using a key pair. In this demo, I use 2 key pairs for 2 instances
 
-Then I stood at the folder: "\mock-project\Ansible\" and run the following command to start the installation
+*Then I stood at the folder: "\mock-project\Ansible\" and run the following command to start the installation
 
     ```
     ansible-playbook playbook.yml
