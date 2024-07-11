@@ -18,11 +18,11 @@ This project builds a model to automatically deploy applications to the cloud en
 **Diagram of work to be done in the project:**
 * Use Terraform to build an infrastructure of 3 instances. Then use Ansible to install resource packs inside the instances
 
-        ![This is an alt text.](/Images/Ansible_Terraform.png "This is a sample image.")
+    ![This is an alt text.](/Images/Ansible_Terraform.png "This is a sample image.")
 
 * Instance running Jenkins are in the private subnet, instance used as Bastion Host and running Gitea are in the public subnet. And 1 EKS cluster to deploy pods.
 
-        ![This is an alt text.](/Images/Instances.png "This is a sample image.")
+    ![This is an alt text.](/Images/Instances.png "This is a sample image.")
 
 -----
 ## Build infrastructure using Terraform
