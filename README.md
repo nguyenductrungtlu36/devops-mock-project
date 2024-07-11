@@ -67,8 +67,10 @@ and replace the URL with the path on Gitea
 
 ### Configure Jenkins
 * To connect Jenkins with Gitea and DockerHub we need to create credentials
-* Connect Jenkins and Gitea using webhook with CICD
+* Connect Jenkins and Gitea using webhook to deploy CICD
+    ![This is an alt text.](/Images/webhook.png "This is a sample image.")
 
+## Kubernetes Deployment
 
 
 
