@@ -46,13 +46,29 @@ This project builds a model to automatically deploy applications to the cloud en
 ## Install Docker, Jenkins, Java, and Gitea using Ansible 
 To install application packages, we must connect to instances using a key pair. In this demo, I use 2 key pairs for 2 instances
 
-*Then I stood at the folder: "\mock-project\Ansible\" and run the following command to start the installation
+- Then I stood at the folder: "\mock-project\Ansible\" and run the following command to start the installation
 
     ```
     ansible-playbook playbook.yml
     ```
 -----
 ## Configure Jenkins and Gitea
+### Configure Gitea
+* I create a repository and connect to the local repository by changing their path:
+* I read the file containing the URL with the command:
+    
+    ```
+    cat .git/config/
+    ```
+
+and replace the URL with the path on Gitea
+
+![This is an alt text.](/Images/url_gitea.png "This is a sample image.")
+
+### Configure Jenkins
+* To connect Jenkins with Gitea and DockerHub we need to create credentials
+* Connect Jenkins and Gitea using webhook with CICD
+
 
 
 
