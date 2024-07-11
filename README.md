@@ -105,6 +105,8 @@ After the webhook is completed, all commits will automatically deploy to Jenkins
 
 - And finally we commit the code and watch them automatically deploy to the K8s cluster.
 
+----
+
 ***Deploying work automatically will help minimize errors and save time for users. I hope this project will help people better understand a CICD stream***
 
 
