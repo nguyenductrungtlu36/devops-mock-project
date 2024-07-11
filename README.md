@@ -71,7 +71,16 @@ and replace the URL with the path on Gitea
     ![This is an alt text.](/Images/webhook.png "This is a sample image.")
 
 ## Kubernetes Deployment
+- After building EKS cluster using terraform, we will connect and get data into the EKS cluster on the Server
 
+- We run the following commands to get the contexts and update the config file
+    ```
+    sudo aws eks --region ap-southeast-1 update-kubeconfig --name eks_cluster
+    arn:aws:eks:ap-southeast-1:381492155480:cluster/eks_cluster
+    sudo kubectl config get-contexts
+    ```
+
+- And finally we commit the code and watch them automatically deploy to the K8s cluster
 
 
 
