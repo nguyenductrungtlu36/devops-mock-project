@@ -56,6 +56,7 @@ To install application packages, we must connect to instances using a key pair. 
 When running the `playbook.yml`, the resource packs will be installed one by one.
 
 To view installed resource pack tasks, visit `Ansible/roles/setup/tasks/`. This here will list the tasks that Ansible will perform on the Instance in AWS.
+
 -----
 ## Configure Jenkins and Gitea
 ### Configure Gitea
@@ -73,7 +74,7 @@ and replace the URL with the path on Gitea
 ### Configure Jenkins
 * To connect Jenkins with Gitea and DockerHub we need to create credentials
 * Connect Jenkins and Gitea using webhook to deploy CICD
-    ![This is an alt text.](/Images/webhook.png "This is a sample image.")
+![This is an alt text.](/Images/webhook.png "This is a sample image.")
 
 ## Kubernetes Deployment
 - After building EKS cluster using terraform, we will connect and get data into the EKS cluster on the Server
