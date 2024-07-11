@@ -42,7 +42,7 @@ This project builds a model to automatically deploy applications to the cloud en
     ```
     terraform destroy
     ```
-    
+
 -----
 ## Install Docker, Jenkins, Java, and Gitea using Ansible 
 
