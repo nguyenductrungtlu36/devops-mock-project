@@ -74,12 +74,12 @@ To view installed resource pack tasks, visit `Ansible/roles/setup/tasks/`. This 
 ### Configure Jenkins
 * To connect Jenkins with Gitea and DockerHub we need to create credentials
 
-![This is an alt text.](/Images/url_gitea.png "This is a sample image.")
+![This is an alt text.](/Images/credentials.png "This is a sample image.")
 
 * After having the credential, we go to the `Jenkinsfile` file at the path `/application/` to change DockerHub credential accordingly so they can connect to each other.
 
 * Connect Jenkins and Gitea using webhook to deploy CICD
-![This is an alt text.](/Images/credentials.png "This is a sample image.")
+![This is an alt text.](/Images/webhook.png "This is a sample image.")
 
 On the Jenkins server, we create `Scan Multibranch Pipeline Triggers` to get the token. 
 Then replace the newly created token into the path to Gitea and Jenkins webhook. The path structure is:
