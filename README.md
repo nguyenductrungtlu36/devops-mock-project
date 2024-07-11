@@ -67,14 +67,30 @@ To view installed resource pack tasks, visit `Ansible/roles/setup/tasks/`. This 
     cat .git/config/
     ```
 
-and replace the URL with the path on Gitea
+* And replace the URL with the path on Gitea
 
 ![This is an alt text.](/Images/url_gitea.png "This is a sample image.")
 
 ### Configure Jenkins
 * To connect Jenkins with Gitea and DockerHub we need to create credentials
+
+![This is an alt text.](/Images/url_gitea.png "This is a sample image.")
+
+* After having the credential, we go to the `Jenkinsfile` file at the path `/application/` to change DockerHub credential accordingly so they can connect to each other.
+
 * Connect Jenkins and Gitea using webhook to deploy CICD
-![This is an alt text.](/Images/webhook.png "This is a sample image.")
+![This is an alt text.](/Images/credentials.png "This is a sample image.")
+
+On the Jenkins server, we create `Scan Multibranch Pipeline Triggers` to get the token. 
+Then replace the newly created token into the path to Gitea and Jenkins webhook. The path structure is:
+
+`JENKINS_URL/multibranch-webhook-trigger/invoke?token=[Trigger token]`
+
+In there:
+*  - `JENKINS_URL` here is the path of jenkins
+*  - `Trigger token` this is the token created at `Scan Multibranch Pipeline Triggers`
+
+After the webhook is completed, all commits will automatically deploy to Jenkins Server.
 
 ## Kubernetes Deployment
 - After building EKS cluster using terraform, we will connect and get data into the EKS cluster on the Server
