@@ -39,9 +39,9 @@ This project builds a model to automatically deploy applications to the cloud en
 
 ### When we want to stop all this work, we use the command
 
-    ```
+    `
     terraform destroy
-    ```
+    `
 
 -----
 ## Install Docker, Jenkins, Java, and Gitea using Ansible 
