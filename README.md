@@ -1,6 +1,6 @@
-# Demo Mock Projetc
+# Demo Mock Projetc (DevOps)
 ----
-# Overview
+## Overview
 This project builds a model to automatically deploy applications to the cloud environment, helping to optimize the product deployment process. When users update changes, those changes will immediately be updated on the Server automatically. This will be very useful for users in shortening deployment time and minimizing errors during application deployment and operation.
 
 ![This is an alt text.](/Images/overview-project.jpg "This is a sample image.")
@@ -14,40 +14,36 @@ This project builds a model to automatically deploy applications to the cloud en
 * Gitea Server to update commits and webhooks to jenkins
 * Kubernetes (K8s) to deploy applications
 -----
-# Getting Started
+## Getting Started
 **Diagram of work to be done in the project:**
 * Use Terraform to build an infrastructure of 3 instances. Then use Ansible to install resource packs inside the instances
 
-![This is an alt text.](/Images/Ansible_Terraform.png "This is a sample image.")
+        ![This is an alt text.](/Images/Ansible_Terraform.png "This is a sample image.")
 
 * Instance running Jenkins are in the private subnet, instance used as Bastion Host and running Gitea are in the public subnet. And 1 EKS cluster to deploy pods.
 
-![This is an alt text.](/Images/Instances.png "This is a sample image.")
+        ![This is an alt text.](/Images/Instances.png "This is a sample image.")
 
 -----
-# Build infrastructure using Terraform
-## Use the following commands to run build instances
+## Build infrastructure using Terraform
+### Use the following commands to run build instances
 ***Note:*** 
 - Stand in the folder: "\mock-project\terraform" to build 2 instances of Jenkins and Bastion Host
 - Stand in the folder: "\mock-project\terraform-eks" to build EKS cluster
 
-```
-terraform init
-terraform plan
-terraform apply
-```
+    ```
+    terraform init
+    terraform plan
+    terraform apply
+    ```
 
-## When we want to stop all this work, we use the command:
+### When we want to stop all this work, we use the command:
 
-```
-terraform destroy
-```
-
-
-
-
+    ```
+    terraform destroy
+    ```
 -----
-# 
+## Install Docker, Jenkins, Java, and Gitea using Ansible 
 
 
 
