@@ -87,8 +87,8 @@ Then replace the newly created token into the path to Gitea and Jenkins webhook.
 `JENKINS_URL/multibranch-webhook-trigger/invoke?token=[Trigger token]`
 
 In there:
-*  - `JENKINS_URL` here is the path of jenkins
-*  - `Trigger token` this is the token created at `Scan Multibranch Pipeline Triggers`
+  - `JENKINS_URL` here is the path of jenkins
+  - `Trigger token` this is the token created at `Scan Multibranch Pipeline Triggers`
 
 After the webhook is completed, all commits will automatically deploy to Jenkins Server.
 
