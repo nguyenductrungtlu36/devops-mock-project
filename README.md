@@ -27,6 +27,7 @@ This project builds a model to automatically deploy applications to the cloud en
 -----
 ## Build infrastructure using Terraform
 **Use the following commands to run build instances**
+
 ***Note:*** 
 - Stand in the folder: "\mock-project\terraform" to build 2 instances of Jenkins and Bastion Host
 - Stand in the folder: "\mock-project\terraform-eks" to build EKS cluster
@@ -37,7 +38,7 @@ This project builds a model to automatically deploy applications to the cloud en
     terraform apply
     ```
 
-- When we want to stop all this work, we use the command
+- When we want to stop all this work, we use the command:
 
     ```
     terraform destroy
@@ -51,6 +52,10 @@ To install application packages, we must connect to instances using a key pair. 
     ```
     ansible-playbook playbook.yml
     ```
+
+When running the `playbook.yml`, the resource packs will be installed one by one.
+
+To view installed resource pack tasks, visit `Ansible/roles/setup/tasks/`. This here will list the tasks that Ansible will perform on the Instance in AWS.
 -----
 ## Configure Jenkins and Gitea
 ### Configure Gitea
